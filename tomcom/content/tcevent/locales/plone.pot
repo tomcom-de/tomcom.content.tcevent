@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-10-31 09:58+0000\n"
+"POT-Creation-Date: 2013-11-21 15:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,93 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 
+#: ./../templates/tcevent_view.pt:63
+msgid "Downloads"
+msgstr ""
+
+#: ./../templates/tcevent_folder_view.pt:33
+msgid "Mehr..."
+msgstr ""
+
 #: ./../temp/translations.pt:1
-msgid "SliderImage"
+msgid "TCEvent"
 msgstr ""
 
-#. Default: "Body Text"
-#: ./../sliderimage.py:37
-msgid "label_body_text"
+#: ./../templates/tcevent_view.pt:112
+msgid "What"
 msgstr ""
 
-#. Default: "External link"
-#: ./../sliderimage.py:46
-msgid "label_external_link"
+#. Default: "Attendees"
+#: ./../templates/tcevent_view.pt:225
+msgid "contact_attendees"
+msgstr ""
+
+#. Default: "Contact Name"
+#: ./../templates/tcevent_view.pt:205
+msgid "contact_name"
+msgstr ""
+
+#. Default: "Contact Phone"
+#: ./../templates/tcevent_view.pt:217
+msgid "contact_phone"
+msgstr ""
+
+#. Default: "More information about this event…"
+#: ./../templates/tcevent_view.pt:28
+msgid "event_more_information"
+msgstr ""
+
+#. Default: "When"
+#: ./../templates/tcevent_view.pt:127
+msgid "event_when"
+msgstr ""
+
+#. Default: "${startdate} to ${linebreak} ${enddate}"
+#: ./../templates/tcevent_view.pt:146
+msgid "event_when_differentday"
+msgstr ""
+
+#: ./../templates/tcevent_view.pt:140
+msgid "event_when_differentday_optional_word_between_date_and_time"
+msgstr ""
+
+#. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
+#: ./../templates/tcevent_view.pt:179
+msgid "event_when_sameday"
+msgstr ""
+
+#. Default: "Where"
+#: ./../templates/tcevent_view.pt:194
+msgid "event_where"
+msgstr ""
+
+#. Default: "Add event to calendar"
+#: ./../templates/tcevent_view.pt:233
+msgid "heading_add_to_calendar"
+msgstr ""
+
+#. Default: "iCal"
+#: ./../templates/tcevent_view.pt:247
+msgid "label_add_to_ical"
+msgstr ""
+
+#. Default: "vCal"
+#: ./../templates/tcevent_view.pt:241
+msgid "label_add_to_vcal"
+msgstr ""
+
+#. Default: "Event details"
+#: ./../templates/tcevent_view.pt:107
+msgid "summary_event_details"
+msgstr ""
+
+#. Default: "Download this event in iCal format"
+#: ./../templates/tcevent_view.pt:242
+msgid "title_add_to_ical"
+msgstr ""
+
+#. Default: "Download this event in vCal format"
+#: ./../templates/tcevent_view.pt:236
+msgid "title_add_to_vcal"
 msgstr ""
 
