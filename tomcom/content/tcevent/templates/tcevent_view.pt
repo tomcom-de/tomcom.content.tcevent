@@ -17,41 +17,46 @@
                                     brain_images python:get_level(brain=context,portal_types=['Image']);
                                     brain_videos python:get_level(brain=context,portal_types=['TCCast'])">
 
-        <div class="row-fluid">
+        <div class="row">
 
-            <div class="span8">
+            <div class="col-md-8">
                 <metal:field use-macro="python:context.widget('text', mode='view')">
                     Body text
                 </metal:field>
 
                 <p tal:condition="context/event_url|nothing">
                     <a target="_blank"
-                       class="url"
+                       class="url event-external-link"
                        href="event_url"
-                       i18n:translate="event_more_information"
+                       id="parent-fieldname-eventUrl"
                        tal:define="field python:context.getField('eventUrl');"
-                                id="parent-fieldname-eventUrl"
-                                tal:attributes="href context/event_url">
-                       More information about this event&hellip;</a>
+                                    tal:attributes="href context/event_url">
+                       <i class="fa fa-angle-double-right"></i>
+                       <tal:block
+                           i18n:translate="event_more_information">
+                           More information about this event&hellip;
+                       </tal:block>
+                    </a>
                 </p>
 
                 <div class="clear" tal:condition="python: len(brain_images)>0">
                     <hr/>
-                    <div class="row-fluid row-fluid-image-listing">
+                    <div class="row row-fluid-image-listing">
                         <tal:block tal:repeat="brain_image brain_images">
-                            <div class="element span3"
+                            <div class="element col-md-3"
                                  tal:define="imageLink string:${brain_image/getURL}">
                                 <a class="image-overlay" rel="gal1"
                                    tal:attributes="href imageLink;
                                                   title brain_image/Title">
-                                    <img class="product-element-image img-polaroid"
+                                    <img class="product-element-image img-polaroid img-responsive"
                                          tal:attributes="src string:${brain_image/getURL}/image_preview;
-                                                         alt brain_image/Title"/><br/>
+                                                         alt brain_image/Title"/>
                                     <b class="image-title" tal:content="brain_image/Title"/>
                                 </a>
                             </div>
                         </tal:block>
                     </div>
+                    <hr/>
                 </div>
 
                 <div class="press-download-box">
@@ -60,7 +65,7 @@
                         <thead>
                         <tr tal:define="headl python:here.getAdapter('getlevel')(portal_types=['File'])"
                             tal:condition="headl">
-                            <td colspan="4" style="padding-bottom:0px;"><h3><tal:block i18n:translate="">Downloads</tal:block></h3></td>
+                            <td colspan="4" style="padding-bottom:0px;"><h3 class="margin-top-0"><tal:block i18n:translate="">Downloads</tal:block></h3></td>
                         </tr>
                         </thead>
                         <tbody>
@@ -69,7 +74,7 @@
 
                                     <tr>
                                         <td class="icons">
-                                            <img tal:attributes="src brain/getIcon">
+                                            <img class="img-responsive" tal:attributes="src brain/getIcon">
                                         </td>
                                         <td>
                                             <div>
@@ -86,7 +91,7 @@
                                         </td>
                                         <td align="right">
                                             <div class="download-background">
-                                                <a class="btn btn-small"
+                                                <a class="btn btn-default btn-sm"
                                                    tal:condition="python:brain.portal_type=='File'"
                                                    tal:attributes="href string:${brain/getURL}/at_download/file;">
                                                     Download
@@ -102,7 +107,7 @@
                 </div>
             </div>
 
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="eventDetails vcard">
                     <table class="event-view-table table table-striped table-bordered"
                            summary="Event details" i18n:attributes="summary summary_event_details;">
@@ -237,13 +242,13 @@
                                        tal:attributes="href string:$here_url/vcs_view"
                                        title="Download this event in vCal format"
                                        i18n:attributes="title title_add_to_vcal;">
-                                        <i class="icon-calendar-empty"></i>
+                                        <i class="fa fa-calendar-o"></i>
                                         <span i18n:translate="label_add_to_vcal">vCal</span></a><br />
                                     <a href="#"
                                        tal:attributes="href string:$here_url/ics_view"
                                        title="Download this event in iCal format"
                                        i18n:attributes="title title_add_to_ical;">
-                                        <i class="icon-calendar-empty"></i>
+                                        <i class="fa fa-calendar-o"></i>
                                         <span i18n:translate="label_add_to_ical">iCal</span></a>
                                 </td>
                             </tr>
